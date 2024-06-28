@@ -134,7 +134,6 @@ public class cadastroVIEW extends javax.swing.JFrame {
     
     
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        boolean conexao;
         int resposta;
         Connection conn;
 
