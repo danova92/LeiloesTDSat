@@ -5,6 +5,10 @@ public class ProdutosDTO {
     private Integer valor;
     private String status;
 
+
+    public ProdutosDTO() {
+    }
+
     public ProdutosDTO(Integer id, String nome, Integer valor, String status) {
         this.id = id;
         this.nome = nome;
@@ -12,11 +16,6 @@ public class ProdutosDTO {
         this.status = status;
     }
 
-    public ProdutosDTO() {
-    }
-
-    
-    
     public Integer getId() {
         return id;
     }

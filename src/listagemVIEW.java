@@ -40,7 +40,7 @@ public class listagemVIEW extends javax.swing.JFrame {
         }
     }
 
-    public void tblProdutoValueChanged(ListSelectionEvent e) {
+     public void tblProdutoValueChanged(ListSelectionEvent e) {
 
         if (!e.getValueIsAdjusting()) {
             int selectedRow = listaProdutos.getSelectedRow();
@@ -64,6 +64,8 @@ public class listagemVIEW extends javax.swing.JFrame {
 
         return posicaoProduto;
     }
+
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -203,9 +205,7 @@ public class listagemVIEW extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

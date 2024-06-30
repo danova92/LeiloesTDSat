@@ -105,7 +105,6 @@ public class ProdutosDAO {
     }
 
     public List<ProdutosDTO> listarProdutosVendidos() {
-        List<ProdutosDTO> listagem = new ArrayList<>();
 
         conn = new conectaDAO().connectDB();
         if (conn == null) {
@@ -114,6 +113,7 @@ public class ProdutosDAO {
         }
 
         try {
+
             st = conn.prepareStatement("SELECT * FROM produtos WHERE status = 'Vendido'");
             rs = st.executeQuery();
 
