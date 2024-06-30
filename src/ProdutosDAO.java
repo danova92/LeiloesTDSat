@@ -105,32 +105,33 @@ public class ProdutosDAO {
     }
 
     public List<ProdutosDTO> listarProdutosVendidos() {
+        List<ProdutosDTO> listagem = new ArrayList<>();
 
         conn = new conectaDAO().connectDB();
         if (conn == null) {
+            System.out.println("Erro ao conectar");
+            return listagem;
         }
 
         try {
-
-            st = conn.prepareStatement("UPDATE produtos SET status = 'Vendido' WHERE id = ?");
+            st = conn.prepareStatement("SELECT * FROM produtos WHERE status = 'Vendido'");
             rs = st.executeQuery();
 
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String nome = rs.getString("nome");
-                String descricao = rs.getString("descricao");
-                double preco = rs.getDouble("preco");
+                int valor = rs.getInt("valor");
                 String status = rs.getString("status");
 
-                ProdutosDTO produto = new ProdutosDTO();
+                ProdutosDTO produto = new ProdutosDTO(id, nome, valor, status);
                 listagem.add(produto);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return listagem;
 
+        return listagem;
     }
 
     public void desconectar() {
