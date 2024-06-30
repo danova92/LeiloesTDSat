@@ -105,7 +105,7 @@ public class ProdutosDAO {
     }
 
     public List<ProdutosDTO> listarProdutosVendidos() {
-        
+
         conn = new conectaDAO().connectDB();
         if (conn == null) {
             System.out.println("Erro ao conectar");
@@ -130,6 +130,7 @@ public class ProdutosDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return listagem;
     }
 

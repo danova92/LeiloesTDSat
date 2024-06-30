@@ -249,24 +249,5 @@ public class listagemVIEW extends javax.swing.JFrame {
     private javax.swing.JTable listaProdutos;
     // End of variables declaration//GEN-END:variables
 
-    /*private void listarProdutos(String filtro) {
-        try {
-            ProdutosDAO produtosdao = new ProdutosDAO();
-            ArrayList<ProdutosDTO> listagem = produtosdao.listarProdutos(filtro);
-
-            DefaultTableModel model = (DefaultTableModel) listaProdutos.getModel();
-            model.setRowCount(0);
-
-            for (ProdutosDTO produto : listagem) {
-                model.addRow(new Object[]{
-                    produto.getId(),
-                    produto.getNome(),
-                    produto.getValor(),
-                    produto.getStatus()
-                });
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }*/
+    
 }

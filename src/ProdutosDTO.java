@@ -5,6 +5,7 @@ public class ProdutosDTO {
     private Integer valor;
     private String status;
 
+
     public ProdutosDTO() {
     }
 
@@ -15,8 +16,6 @@ public class ProdutosDTO {
         this.status = status;
     }
 
-    
-    
     public Integer getId() {
         return id;
     }
