@@ -9,6 +9,11 @@ public class listagemVIEW extends javax.swing.JFrame {
 
     public listagemVIEW() {
         initComponents();
+        listaProdutos.getSelectionModel().addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                tblProdutoValueChanged(evt);
+            }
+        });
         listarProdutos("");
     }
 
@@ -35,7 +40,30 @@ public class listagemVIEW extends javax.swing.JFrame {
         }
     }
 
-    
+     public void tblProdutoValueChanged(ListSelectionEvent e) {
+
+        if (!e.getValueIsAdjusting()) {
+            int selectedRow = listaProdutos.getSelectedRow();
+            if (selectedRow != -1) {
+
+                id_produto_venda.setText(String.valueOf(listaProdutos.getValueAt(selectedRow, 0)));
+
+            }
+
+        }
+    }
+
+    private int getPosicaoProduto() {
+
+        int posicaoProduto = listaProdutos.getSelectedRow();
+
+        if (posicaoProduto == -1) {
+            JOptionPane.showMessageDialog(rootPane, "Selecione um produto");
+
+        }
+
+        return posicaoProduto;
+    }
 
     
 
@@ -166,9 +194,9 @@ public class listagemVIEW extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVenderActionPerformed
 
     private void btnVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVendasActionPerformed
-        //VendasVIEW vendas = new VendasVIEW(); 
-        //vendas.setVisible(true);
-        //dispose();
+        VendasVIEW vendas = new VendasVIEW(); 
+        vendas.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnVendasActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
