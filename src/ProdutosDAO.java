@@ -104,7 +104,7 @@ public class ProdutosDAO {
 
     }
 
-    public List<ProdutosDTO> listarProdutosVendidos() {
+   /* public List<ProdutosDTO> listarProdutosVendidos() {
 
         conn = new conectaDAO().connectDB();
         if (conn == null) {
@@ -131,7 +131,7 @@ public class ProdutosDAO {
         }
         return listagem;
 
-    }
+    }*/
 
     public void desconectar() {
         try {

@@ -1,0 +1,53 @@
+[33mcommit de81d212a8e917bd72163c9d2a6c157e71e78645[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmelhorias[m[33m, [m[1;31morigin/melhorias[m[33m)[m
+Author: Guilherme da Nova <guibiluca92@gmail.com>
+Date:   Sun Jun 30 10:44:32 2024 -0300
+
+    Implementada a funão do botão Vender para alterar status do produto
+
+[33mcommit 5a666a9e9dbe8afd7db0f2739a61a8d38cd85727[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Guilherme da Nova <guibiluca92@gmail.com>
+Date:   Sun Jun 30 10:37:27 2024 -0300
+
+    Implementada navegaão para tela de vendas e corrigido alguns problemas no método listarProdutosVendidos(). Também deletada algumas linhas que nao estavam sendo usadas
+
+[33mcommit d30e855d9dcbf4df5c37f0a3c0096c985ada0486[m
+Author: Guilherme da Nova <guibiluca92@gmail.com>
+Date:   Sun Jun 30 10:04:57 2024 -0300
+
+    Criada a tela de vendas
+
+[33mcommit e495108df8ac746bcd027d519f19c41732c3c1b3[m
+Author: Guilherme da Nova <guibiluca92@gmail.com>
+Date:   Sun Jun 30 09:59:33 2024 -0300
+
+    Criada a função listarProdutosVendidos()
+
+[33mcommit b790a8c78eb950518acae93b5095d13af0c4095d[m
+Author: Guilherme da Nova <guibiluca92@gmail.com>
+Date:   Sun Jun 30 09:40:10 2024 -0300
+
+    Implementada a função do botao Vender para alterar status do produto
+
+[33mcommit 6f6587eb63f1be26132796a7da40c63e08b0f792[m
+Author: Guilherme da Nova <guibiluca92@gmail.com>
+Date:   Fri Jun 28 10:59:29 2024 -0300
+
+    Implementada a tabela de listagem de produtos
+
+[33mcommit c229522c2beb3486983f6c7861355ff40223b489[m
+Author: Guilherme da Nova <guibiluca92@gmail.com>
+Date:   Fri Jun 28 09:48:47 2024 -0300
+
+    Botão Salvar implementado
+
+[33mcommit 48f1e49ace01edc1f1dcd25cc89163df6f4921a7[m
+Author: danova92 <guibiluca92@gmail.com>
+Date:   Wed Jun 26 11:10:15 2024 -0300
+
+    Create README.md
+
+[33mcommit b19f89deb3619241e4a3524a6fb9544a337a3427[m
+Author: Guilherme da Nova <guibiluca92@gmail.com>
+Date:   Wed Jun 26 10:56:43 2024 -0300
+
+    Projeto inicial
