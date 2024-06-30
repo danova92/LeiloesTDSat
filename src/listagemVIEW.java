@@ -1,12 +1,19 @@
 
 import java.sql.Connection;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.event.ListSelectionEvent;
 import javax.swing.table.DefaultTableModel;
 
 public class listagemVIEW extends javax.swing.JFrame {
 
     public listagemVIEW() {
         initComponents();
+        listaProdutos.getSelectionModel().addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                tblProdutoValueChanged(evt);
+            }
+        });
         listarProdutos("");
     }
 
@@ -31,6 +38,31 @@ public class listagemVIEW extends javax.swing.JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void tblProdutoValueChanged(ListSelectionEvent e) {
+
+        if (!e.getValueIsAdjusting()) {
+            int selectedRow = listaProdutos.getSelectedRow();
+            if (selectedRow != -1) {
+
+                id_produto_venda.setText(String.valueOf(listaProdutos.getValueAt(selectedRow, 0)));
+
+            }
+
+        }
+    }
+
+    private int getPosicaoProduto() {
+
+        int posicaoProduto = listaProdutos.getSelectedRow();
+
+        if (posicaoProduto == -1) {
+            JOptionPane.showMessageDialog(rootPane, "Selecione um produto");
+
+        }
+
+        return posicaoProduto;
     }
 
     @SuppressWarnings("unchecked")
@@ -143,11 +175,19 @@ public class listagemVIEW extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVenderActionPerformed
-        String id = id_produto_venda.getText();
+        Connection conn;
+        int linhaSelecionada = listaProdutos.getSelectedRow();
+
+        if (linhaSelecionada == -1) {
+            JOptionPane.showMessageDialog(null, "Selecione um produto");
+            return;
+        }
+
+        int id = (int) listaProdutos.getValueAt(linhaSelecionada, 0);
 
         ProdutosDAO produtosdao = new ProdutosDAO();
-
-        //produtosdao.venderProduto(Integer.parseInt(id));
+        conn = new conectaDAO().connectDB();
+        produtosdao.venderProduto(id);
         listarProdutos("");
     }//GEN-LAST:event_btnVenderActionPerformed
 
